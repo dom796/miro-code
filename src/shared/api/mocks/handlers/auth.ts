@@ -135,8 +135,7 @@ export const authHandlers = [
           },
         },
       );
-    } catch (error) {
-      console.error("Error refreshing token:", error);
+    } catch {
       return HttpResponse.json(
         {
           message: "Недействительный refresh token",
