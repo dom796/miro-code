@@ -67,14 +67,14 @@ export function BoardsListLayoutFilters({
       {filters && (
         <div className="flex items-center gap-2">
           <div className="text-sm text-gray-500 whitespace-nowrap">
-            Filter by
+            Фильтр
           </div>
           {filters}
         </div>
       )}
       {sort && (
         <div className="flex items-center gap-2 ">
-          <div className="text-sm text-gray-500 whitespace-nowrap">Sort by</div>
+          <div className="text-sm text-gray-500 whitespace-nowrap">Сортировка</div>
           {sort}
         </div>
       )}
