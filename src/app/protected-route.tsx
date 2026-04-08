@@ -1,7 +1,6 @@
 import { ROUTES } from "@/shared/model/routes";
-import { Outlet, redirect } from "react-router-dom";
+import { Navigate, Outlet, redirect } from "react-router-dom";
 import { useSession } from "@/shared/model/session";
-import { Navigate } from "react-router-dom";
 import { enableMocking } from "@/shared/api/mocks";
 
 export function ProtectedRoute() {
