@@ -11,7 +11,6 @@ export function BoardItem({ board }: { board: ApiSchemas["Board"] }) {
 
   return (
     <BoardsListItem
-      key={board.id}
       board={board}
       rightActions={
         <BoardsFavoriteToggle
