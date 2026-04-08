@@ -23,7 +23,7 @@ fetchClient.use({
     } else {
       return new Response(
         JSON.stringify({
-          code: "NOT_AUTHOIZED",
+          code: "NOT_AUTHORIZED",
           message: "You are not authorized to access this resource",
         } as ApiSchemas["Error"]),
         {
