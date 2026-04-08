@@ -44,6 +44,8 @@ export function useBoardsList({
 
   const cursorRef: RefCallback<HTMLDivElement> = useCallback(
     (el) => {
+      if (!el) return;
+
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
@@ -53,13 +55,11 @@ export function useBoardsList({
         { threshold: 0.5 },
       );
 
-      if (el) {
-        observer.observe(el);
+      observer.observe(el);
 
-        return () => {
-          observer.disconnect();
-        };
-      }
+      return () => {
+        observer.disconnect();
+      };
     },
     [fetchNextPage],
   );
