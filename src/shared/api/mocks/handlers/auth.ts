@@ -114,7 +114,10 @@ export const authHandlers = [
       const user = mockUsers.find((u) => u.id === session.userId);
 
       if (!user) {
-        throw new Error("User not found");
+        return HttpResponse.json(
+          { message: "Пользователь не найден", code: "USER_NOT_FOUND" },
+          { status: 401 },
+        );
       }
 
       const { accessToken, refreshToken: newRefreshToken } =
