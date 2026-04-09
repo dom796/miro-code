@@ -2,6 +2,8 @@ import { rqClient } from "@/shared/api/instance";
 import { keepPreviousData } from "@tanstack/query-core";
 import { RefCallback, useCallback } from "react";
 
+const INTERSECTION_THRESHOLD = 0.5;
+
 type UseBoardsListParams = {
   limit?: number;
   isFavorite?: boolean;
@@ -52,7 +54,7 @@ export function useBoardsList({
             fetchNextPage();
           }
         },
-        { threshold: 0.5 },
+        { threshold: INTERSECTION_THRESHOLD },
       );
 
       observer.observe(el);
