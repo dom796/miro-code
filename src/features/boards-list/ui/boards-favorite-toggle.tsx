@@ -15,6 +15,7 @@ export function BoardsFavoriteToggle({
   return (
     <button
       onClick={onToggle}
+      aria-label={isFavorite ? "Убрать из избранного" : "Добавить в избранное"}
       className={cn(
         "p-1 rounded-full hover:bg-gray-100 transition-colors",
         className,
