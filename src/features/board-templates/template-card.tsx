@@ -2,7 +2,7 @@ import { Button } from "@/shared/ui/kit/button";
 import { PlusIcon } from "lucide-react";
 import { cn } from "@/shared/lib/css";
 
-interface Template {
+export interface Template {
   id: string;
   name: string;
   description: string;
