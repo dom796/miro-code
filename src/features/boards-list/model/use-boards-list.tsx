@@ -3,6 +3,7 @@ import { keepPreviousData } from "@tanstack/query-core";
 import { RefCallback, useCallback } from "react";
 
 const INTERSECTION_THRESHOLD = 0.5;
+const DEFAULT_BOARDS_LIMIT = 20;
 
 type UseBoardsListParams = {
   limit?: number;
@@ -12,7 +13,7 @@ type UseBoardsListParams = {
 };
 
 export function useBoardsList({
-  limit = 20,
+  limit = DEFAULT_BOARDS_LIMIT,
   isFavorite,
   search,
   sort,
