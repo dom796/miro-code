@@ -24,11 +24,13 @@ import {
   useTemplatesModal,
 } from "@/features/board-templates";
 
+const SEARCH_DEBOUNCE_DELAY = 300;
+
 function BoardsListPage() {
   const boardsFilters = useBoardsFilters();
   const boardsQuery = useBoardsList({
     sort: boardsFilters.sort,
-    search: useDebouncedValue(boardsFilters.search, 300),
+    search: useDebouncedValue(boardsFilters.search, SEARCH_DEBOUNCE_DELAY),
   });
 
   const templatesModal = useTemplatesModal();
