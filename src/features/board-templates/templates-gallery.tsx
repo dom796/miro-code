@@ -1,7 +1,7 @@
 import { ScrollArea } from "@/shared/ui/kit/scroll-area";
-import { TemplateCard } from "./template-card";
+import { TemplateCard, type Template } from "./template-card";
 
-const templates = [
+const templates: Template[] = [
   {
     id: "1",
     name: "Template 1",
