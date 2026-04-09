@@ -51,7 +51,7 @@ export function BoardsListItem({
         {menuActions && (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Дополнительные действия">
                 <MoreHorizontalIcon className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
