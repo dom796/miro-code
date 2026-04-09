@@ -9,6 +9,7 @@ export function BoardsSearchInput({ value, onChange }: BoardsSearchInputProps) {
   return (
     <Input
       id="search"
+      aria-label="Поиск досок"
       placeholder="Введите название доски..."
       value={value}
       onChange={(e) => onChange(e.target.value)}
