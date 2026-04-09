@@ -25,6 +25,7 @@ import {
 } from "@/features/board-templates";
 
 const SEARCH_DEBOUNCE_DELAY = 300;
+const DEFAULT_VIEW_MODE: ViewMode = "list";
 
 function BoardsListPage() {
   const boardsFilters = useBoardsFilters();
@@ -37,7 +38,7 @@ function BoardsListPage() {
 
   const createBoard = useCreateBoard();
 
-  const [viewMode, setViewMode] = useState<ViewMode>("list");
+  const [viewMode, setViewMode] = useState<ViewMode>(DEFAULT_VIEW_MODE);
 
   return (
     <>
